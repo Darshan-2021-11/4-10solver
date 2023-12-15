@@ -169,11 +169,11 @@ void solve_for_k(T& k) {
 		for (size_t i = 0; i < possible_operations.size(); ++i) {
 			possible_operations[i] = 0;
 		}
-		cout << "Computing ";
-		for (size_t i = 0; i < numbers.size(); ++i) {
-			cout << numbers[i] << ' ';
-		}
-		cout << endl;
+//	cout << "Computing ";
+//	for (size_t i = 0; i < numbers.size(); ++i) {
+//		cout << numbers[i] << ' ';
+//	}
+//	cout << endl;
 
 		found = compute<T>(possible_operations, parenthesis_index, k);
 		if (found) {
@@ -210,12 +210,12 @@ int main() {
 	numbers.reserve(n);
 	operations.reserve(m);
 
-	for (int i = 1; i <= n; ++i) {
+	for (size_t i = 0; i < n; ++i) {
 		cout << "Enter number " << i << ": ";
 		cin >> number;
 		numbers.push_back(number);
 	}
-	for (int i = 1; i <= m; ++i) {
+	for (size_t i = 0; i < m; ++i) {
 		cout << "Enter operation " << i << ": ";
 		cin >> operation;
 		operations.push_back(operation);
